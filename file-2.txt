@@ -94,7 +94,10 @@ GROUP BY year;
 
 3. Calcolare la media dei voti di ogni appello d'esame
 
-
+SELECT es.exam_id 
+AS average_grade 
+FROM exam_student es 
+GROUP BY es.exam_id;
 
 
 
