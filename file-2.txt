@@ -92,7 +92,7 @@ GROUP BY year;
 
 
 
-3. Calcolare la media dei voti di ogni appello d'esame
+3. Calcolare la media dei voti di ogni appello d'esam
 
 SELECT es.exam_id 
 AS average_grade 
@@ -103,6 +103,12 @@ GROUP BY es.exam_id;
 
 4. Contare quanti corsi di laurea ci sono per ogni dipartiment
 
+SELECT d.name, 
+COUNT(DISTINCT d.id) 
+FROM departments d 
+INNER JOIN degrees deg 
+ON d.id = deg.department_id 
+GROUP BY d.name;
 
 
 
