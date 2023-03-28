@@ -88,7 +88,10 @@ GROUP BY year;
 
 2. Contare gli insegnanti che hanno l'ufficio nello stesso edificio
 
-
+SELECT t.office_address,
+ COUNT(DISTINCT t.id) 
+ FROM teachers t 
+ GROUP BY t.office_address;
 
 
 
